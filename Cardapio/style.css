@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fde6e6 !important;
+    color: aliceblue !important;
+    gap: 2vh;
+    padding: 5vh;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 5rem;
+    padding: 30px;
+    text-decoration: none;
+    background-color: rgba(255, 189, 230, 0.623);
+    border-radius: 50px;
+    text-align: center;
+}
+
+
+.subtitle{
+    color: rgb(74, 119, 119);
+    text-decoration: none;
+}
+
+.cardsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+    
+}
+
+.card{
+    display: flex !important;
+    align-items: center;
+    text-align: center; 
+}

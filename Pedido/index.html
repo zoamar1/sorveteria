@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Sorvete</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <p class="navbar-brand" style="margin: 0 !important;">Sorveteria Deepwoken</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="../Home/index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Cardapio/index.html">Cardápio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Pedido de Sorvete</h1>
+    <div class="mb-3">
+      <label for="nomeInput" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nomeInput" placeholder="Insira seu nome">
+    </div>
+    <button onclick="iniciarPedido()" type="button" class="btn btn-dark">Iniciar Pedido</button>
+
+    <div id="pedidoForm" class="selects-container">
+      <h2>Oi <span id="nomeCliente"></span>, qual seria seu pedido?</h2>
+      <div id="sorveteSelecionado">
+        <h3>Escolha seu(s) sorvete(s)</h3>
+        <select id="sorvete1" class="form-select" aria-label="Selecione um sabor">
+          <option value="0">Selecione um sabor</option>
+          <option value="4.9">Sorvete de Chocolate</option>
+          <option value="4.9">Sorvete de Baunilha</option>
+          <option value="6.27">Sorvete de Morango</option>
+          <option value="11.0">Sorvete de Ferrero Rocher</option>
+          <option value="13.0">Sorvete de Kinder Ovo</option>
+          <option value="12.0">Sorvete de Nutella</option>
+          <option value="21.9">Sorvete de Jabuticaba</option>
+          <option value="22.4">Sorvete de Jaca</option>
+          <option value="26.8">Sorvete de Alho</option>
+        </select>
+        <select id="sorvete2" class="form-select" aria-label="Selecione um sabor">
+          <option value="0">Selecione um sabor</option>
+          <option value="4.9">Sorvete de Chocolate</option>
+          <option value="4.9">Sorvete de Baunilha</option>
+          <option value="6.27">Sorvete de Morango</option>
+          <option value="11.0">Sorvete de Ferrero Rocher</option>
+          <option value="13.0">Sorvete de Kinder Ovo</option>
+          <option value="12.0">Sorvete de Nutella</option>
+          <option value="21.9">Sorvete de Jabuticaba</option>
+          <option value="22.4">Sorvete de Jaca</option>
+          <option value="26.8">Sorvete de Alho</option>
+        </select>
+      </div>
+      
+      <button type="button" onclick="calcularTotal()" class="btn btn-dark">Calcular Preço</button>
+
+      <div id="totalPedido" class="totalDiv">
+        <div>
+          <span class="badge bg-primary">Total:</span>
+          <span class="badge bg-secondary" id="totalPrice"></span>
+        </div>
+        <br>
+        <div>
+          <p>Sorvete: <span id="sorvetePrice"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
